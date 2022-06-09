@@ -3,6 +3,7 @@ package de.waischbrot.apitesting.landsapi;
 import de.waischbrot.apitesting.Main;
 import me.angeschossen.lands.api.integration.LandsIntegration;
 import me.angeschossen.lands.api.land.Area;
+import me.angeschossen.lands.api.land.Land;
 import org.bukkit.Location;
 
 public class LandsManager {
@@ -19,7 +20,7 @@ public class LandsManager {
 
         Area area = landsIntegration.getAreaByLoc(location);
 
-        landsIntegration.
+        Land land = landsIntegration.getLand(location);
 
     }
 }
