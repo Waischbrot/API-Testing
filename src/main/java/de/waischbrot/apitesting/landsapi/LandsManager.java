@@ -4,7 +4,12 @@ import de.waischbrot.apitesting.Main;
 import me.angeschossen.lands.api.integration.LandsIntegration;
 import me.angeschossen.lands.api.land.Area;
 import me.angeschossen.lands.api.land.Land;
+import me.angeschossen.lands.api.player.LandPlayer;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
+
+import java.util.Objects;
+import java.util.UUID;
 
 public class LandsManager {
 
@@ -25,5 +30,8 @@ public class LandsManager {
         assert land != null;
         land.getTrustedPlayers().forEach(land::untrustPlayer);
 
+        LandPlayer landPlayer = landsIntegration.getLandPlayer(UUID.randomUUID());
+
+        landsIntegration.wild(Objects.requireNonNull(landPlayer), Objects.requireNonNull(Bukkit.getWorld("world")));
     }
 }
