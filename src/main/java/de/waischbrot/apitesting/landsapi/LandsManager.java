@@ -22,5 +22,8 @@ public class LandsManager {
 
         Land land = landsIntegration.getLand(location);
 
+        assert land != null;
+        land.getTrustedPlayers().forEach(land::untrustPlayer);
+
     }
 }
