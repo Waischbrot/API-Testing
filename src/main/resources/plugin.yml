@@ -1,0 +1,7 @@
+name: ApiTesting
+version: '${project.version}'
+main: de.waischbrot.apitesting.Main
+api-version: 1.17
+authors: [ Waischbrot ]
+description: Just testing around with some apis
+website: https://waischbrot.de
